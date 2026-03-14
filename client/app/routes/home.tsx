@@ -1,13 +1,24 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
-
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
+import { useState } from "react";
+import SearchBar from "../components/SearchBar";
+import ShipCard from "../components/ShipCard";
+import ships from "../data/ships";
 
 export default function Home() {
-  return <Welcome />;
+  const [search, setSearch] = useState("");
+
+  const filteredShips = ships.filter((ship) =>
+    ship.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  return (
+    <main style={{ padding: "40px" }}>
+      <h1>Holocron</h1>
+      
+      <SearchBar value={search} onChange={setSearch} />
+
+      {filteredShips.map((ship) => (
+        <ShipCard key={ship.id} ship={ship} />
+      ))}
+    </main>
+  );
 }
