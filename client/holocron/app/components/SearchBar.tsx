@@ -1,7 +1,7 @@
 type SearchBarProps = {
-    value: string;
+    value:string;
     onChange: (value: string) => void;
-}
+};
 
 export default function SearchBar({ value, onChange }: SearchBarProps) {
     return (

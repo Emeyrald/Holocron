@@ -1,7 +1,9 @@
+"use client";
+
 import { useState } from "react";
-import SearchBar from "../components/SearchBar";
-import ShipCard from "../components/ShipCard";
-import ships from "../data/ships";
+import SearchBar from "./components/SearchBar";
+import ShipCard from "./components/ShipCard";
+import ships from "./data/ships";
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -12,13 +14,16 @@ export default function Home() {
 
   return (
     <main style={{ padding: "40px" }}>
-      <h1>Holocron</h1>
-      
+      <h1> Holocron</h1>
+      <p>Search Star Wars ships</p>
+
       <SearchBar value={search} onChange={setSearch} />
 
-      {filteredShips.map((ship) => (
-        <ShipCard key={ship.id} ship={ship} />
-      ))}
+      <div>
+        {filteredShips.map((ship) => (
+          <ShipCard key={ship.id} ship={ship} />
+        ))}
+      </div>
     </main>
   );
 }
