@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
 @import "tailwindcss";
 
 :root {
@@ -23,4 +24,14 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.starwars-font {
+  font-family: 'Star Wars', sans-serif;
+}
+
+.starwars-glow {
+  text-shadow:
+    0 0 5px rgba(255, 221, 87, 0.5),
+    0 0 10px rgba(255, 221, 87, 0.3);
 }
