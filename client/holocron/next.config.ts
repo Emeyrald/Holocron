@@ -1,12 +1,15 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === "production";
+const repo = "/holocron";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   output: "export",
-  basePath: isProd ? "/holocron" : "",
-  assetPrefix: isProd ? "/holocron/" : "",
+  images: {
+    unoptimized: true,
+  },
+  basePath: isProd ? repo : "",
+  assetPrefix: isProd ? `${repo}/` : "",
 };
 
 export default nextConfig;
