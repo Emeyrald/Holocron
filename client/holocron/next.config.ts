@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === "production";
-const repo = "/holocron";
+const repo = "/Holocron";
 
 const nextConfig: NextConfig = {
   output: "export",
