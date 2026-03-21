@@ -106,7 +106,7 @@
 
 ---
 
-## Suggested Sequence
+## Desired Sequence
 
 | Phase | Work | Outcome |
 |---|---|---|
