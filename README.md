@@ -4,8 +4,7 @@ A Star Wars encyclopedia for ships, characters, and planets — built with Next.
 
 **[Live Site →](https://holocron-iota.vercel.app/)**
 
-![App screenshot](screenshot.png)
-<!-- Replace with an actual screenshot or GIF once the UI is more complete -->
+![App screenshot](images/app/app-screenshot.png)
 
 ## Tech Stack
 
