@@ -28,7 +28,7 @@ const ships: Ship[] = [
         hyperdrive: "Class 1.0",
         affiliation: "Rebel Alliance",
         description: "The T-65 X-Wing is the signature combat starfighter of the Rebel Alliance and, later, the New Republic. Renowned for its balance of speed, firepower, and maneuverability, it played a decisive role in the destruction of both Death Stars. Its S-foils open into attack position to expose four laser cannons and provide additional stability during combat.",
-        notableUsers: ["Luke Skywalker", "Wedge Antilles", "Poe Dameron"],
+        notableUsers: ["Luke Skywalker", "Wedge Antilles"],
     },
     {
         id: 2,

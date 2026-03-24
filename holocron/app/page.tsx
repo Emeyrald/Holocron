@@ -4,6 +4,7 @@ import { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import ShipCard from "./components/ShipCard";
 import ships from "./data/ships";
+import Link from "next/link";
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -27,7 +28,9 @@ export default function Home() {
 
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {filteredShips.map((ship) => (
-          <ShipCard key={ship.id} ship={ship} />
+          <Link className="block h-full" key={ship.id} href={`/ships/${ship.id}`}>
+            <ShipCard ship={ship} />
+          </Link>
         ))}
       </div>
     </main>

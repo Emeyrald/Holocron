@@ -1,6 +1,6 @@
 # Holocron
 
-A Star Wars encyclopedia for ships, characters, and planets — built with Next.js, TypeScript, and PostgreSQL.
+A Star Wars encyclopedia for ships — built with Next.js, TypeScript, and PostgreSQL.
 
 **[Live Site →](https://holocron-iota.vercel.app/)**
 

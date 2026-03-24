@@ -7,7 +7,7 @@
 ## Initiative 1 — Content Expansion
 
 ### Epic: Ships *(in progress)*
-- [ ] Ship detail pages `/ships/[id]`
+- [x] Ship detail pages `/ships/[id]`
 - [ ] Filter by affiliation / class
 - [ ] Sort by name, length, crew size
 
