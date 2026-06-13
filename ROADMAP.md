@@ -1,6 +1,6 @@
 # Holocron — Project Roadmap
 
-> A beautiful, fully-searchable Star Wars encyclopedia — ships, characters, and planets — backed by a real database and deployed publicly.
+> A beautiful, fully-searchable Star Wars encyclopedia for ships — backed by a real database and deployed publicly.
 
 ---
 
@@ -10,21 +10,6 @@
 - [x] Ship detail pages `/ships/[id]`
 - [ ] Filter by affiliation / class
 - [ ] Sort by name, length, crew size
-
-### Epic: Characters
-- [ ] Define `Character` type (name, species, homeworld, affiliation, description, appearances, force-sensitive)
-- [ ] Characters list page with search
-- [ ] Character detail pages
-
-### Epic: Planets
-- [ ] Define `Planet` type (name, region, climate, terrain, population, affiliation, description)
-- [ ] Planets list page with search
-- [ ] Planet detail pages
-
-### Epic: Cross-linking
-- [ ] Ship detail pages link to notable pilots
-- [ ] Character pages link to their ships
-- [ ] Planet pages link to characters from that planet
 
 ---
 
@@ -42,16 +27,10 @@
 ### Epic: API Routes
 - [ ] `GET /api/ships` — list with optional `?search=` and `?affiliation=` query params
 - [ ] `GET /api/ships/[id]`
-- [ ] Same pattern for characters and planets
 
 ---
 
 ## Initiative 3 — User Experience & Design
-
-### Epic: Navigation
-- [ ] Top nav or sidebar with Ships / Characters / Planets tabs
-- [ ] Active state on current section
-- [ ] Mobile hamburger menu
 
 ### Epic: Visual Polish
 - [ ] Faction color coding (Rebel gold, Imperial red, Republic blue)
@@ -60,8 +39,8 @@
 - [ ] Smooth page transitions
 
 ### Epic: Detail Page Quality
-- [ ] Consistent detail page layout across all three entity types
-- [ ] Related entities section (e.g. "Ships from this planet", "Characters who flew this ship")
+- [ ] Consistent detail page layout across all cards
+- [ ] Related section (e.g. "Characters who flew this ship")
 
 ---
 
@@ -100,6 +79,6 @@
 
 ## Future Considerations *(out of scope for now)*
 - Favorites / bookmarks (localStorage or auth + DB)
-- Additional categories: vehicles, creatures, weapons, etc.
+- Additional categories: planets, characters, vehicles, creatures, weapons, etc.
 - Ship / character comparison feature
 - User accounts (NextAuth)
