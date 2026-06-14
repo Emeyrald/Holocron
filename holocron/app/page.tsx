@@ -8,10 +8,23 @@ import Link from "next/link";
 
 export default function Home() {
   const [search, setSearch] = useState("");
+  const [affiliation, setAffiliation] = useState("");
+  const [shipClass, setShipClass] = useState("");
 
   const filteredShips = ships.filter((ship) =>
-    ship.name.toLowerCase().includes(search.toLowerCase())
+    ship.name.toLowerCase().includes(search.toLowerCase()) &&
+    (affiliation === "" || ship.affiliation === affiliation) &&
+    (shipClass === "" || ship.class === shipClass)
   );
+
+  const handleChange = (
+    field: "search" | "affiliation" | "shipClass",
+    value: string
+  ) => {
+    if (field === "search") setSearch(value);
+    else if (field === "affiliation") setAffiliation(value);
+    else setShipClass(value);
+  };
 
   return (
     <main className="max-w-6xl mx-auto p-10">
@@ -24,7 +37,7 @@ export default function Home() {
 
       <div className="h-px bg-yellow-400/30 mb-6 w-111"></div>
 
-      <SearchBar value={search} onChange={setSearch} />
+      <SearchBar search={search} affiliation={affiliation} shipClass={shipClass} onChange={handleChange} />
 
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {filteredShips.map((ship) => (
